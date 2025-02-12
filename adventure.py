@@ -40,7 +40,6 @@ def enter_dungeon(player_health, inventory, dungeon_rooms):
                         print("You are barely alive!")
         elif room[2] == "none":
             print("There doesn't seem to be a challenge in this room. You move on.")
-        
         display_inventory(inventory)
 
     print(f"Your current health: {player_health}")
