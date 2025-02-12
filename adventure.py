@@ -1,8 +1,5 @@
 import random
-"""
-This handles the player's journey through the dungeon, processing each room,
-    solving puzzles, disarming traps, and updating the player's health and inventory.
-"""
+
 def enter_dungeon(player_health, inventory, dungeon_rooms):
     #this goes through different rooms
     for room in dungeon_rooms:
