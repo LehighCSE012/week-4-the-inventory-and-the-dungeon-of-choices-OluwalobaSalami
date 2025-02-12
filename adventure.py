@@ -1,7 +1,9 @@
 import random
 
 def enter_dungeon(player_health, inventory, dungeon_rooms):
-    #this goes through different rooms
+    """
+    this goes through different rooms
+    """
     for room in dungeon_rooms:
         print("Processing room:", room)
         print(room[0])
@@ -43,13 +45,17 @@ def enter_dungeon(player_health, inventory, dungeon_rooms):
     return player_health, inventory
 
 def acquire_item(inventory, item):
+    """
     #to add an item to the list
+    """
     inventory.append(item)
     print(f"You acquired a {item}!")
     return inventory
 
 def display_inventory(inventory):
+    """
     #this displays the inventory
+    """
     if len(inventory) == 0:
         print("Your inventory is empty.")
     else:
@@ -59,7 +65,9 @@ def display_inventory(inventory):
             print(f"{inventory.index(item) + 1}. {item}")
 
 def main():
-    #main function
+    """
+    main function
+    """
     player_health = 100
     inventory = []
     dungeon_rooms = [
