@@ -48,7 +48,7 @@ def acquire_item(inventory, item):
     #to add an item to the list
     """
     inventory.append(item)
-    print(f"You found a {item} in the room.")
+    print(f"You acquired a {item}!")
     return inventory
 
 def display_inventory(inventory):
