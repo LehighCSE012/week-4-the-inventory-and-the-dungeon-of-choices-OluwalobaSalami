@@ -16,14 +16,14 @@ def enter_dungeon(player_health, inventory, dungeon_rooms):
                 puzzle_outcome = random.choice([True, False])
                 if puzzle_outcome:
                     print(room[3][0])
-                    player_health += room[3][2]
                 else:
                     print(room[3][1])
                     #Updating player health
-                    player_health += room[3][2]
-                    if player_health < 0:
-                        player_health = 0
-                        print("You are barely alive!")
+            player_health += room[3][2]
+            if player_health < 0:
+                player_health = 0
+                print("You are barely alive!")
+        
         elif room[2] == "trap":
             print("You see a potential trap!")
             choice_2 = input("Disarm or bypass? ")
@@ -31,14 +31,13 @@ def enter_dungeon(player_health, inventory, dungeon_rooms):
                 trap_outcome = random.choice([True, False])
                 if trap_outcome:
                     print(room[3][0])
-                    player_health += room[3][2]
                 else:
                     print(room[3][1])
                     #Updating player health
-                    player_health += room[3][2]
-                    if player_health < 0:
-                        player_health = 0
-                        print("You are barely alive!")
+            player_health += room[3][2]
+            if player_health < 0:
+                player_health = 0
+                print("You are barely alive!")
         elif room[2] == "none":
             print("There doesn't seem to be a challenge in this room. You move on.")
         display_inventory(inventory)
