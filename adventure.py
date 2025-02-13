@@ -19,7 +19,6 @@ def enter_dungeon(player_health, inventory, dungeon_rooms):
                     print(room[3][1])
                     #Updating player health
             player_health += room[3][2]
-            print(f"Your current health: {player_health}")
             if player_health < 0:
                 player_health = 0
                 print("You are barely alive!")
@@ -35,7 +34,6 @@ def enter_dungeon(player_health, inventory, dungeon_rooms):
                     print(room[3][1])
                     #Updating player health
             player_health += room[3][2]
-            print(f"Your current health: {player_health}")
             if player_health < 0:
                 player_health = 0
                 print("You are barely alive!")
