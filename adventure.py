@@ -16,6 +16,7 @@ def enter_dungeon(player_health, inventory, dungeon_rooms):
                 puzzle_outcome = random.choice([True, False])
                 if puzzle_outcome:
                     print(room[3][0])
+                    player_health += room[3][2]
                 else:
                     print(room[3][1])
                     #Updating player health
@@ -30,6 +31,7 @@ def enter_dungeon(player_health, inventory, dungeon_rooms):
                 trap_outcome = random.choice([True, False])
                 if trap_outcome:
                     print(room[3][0])
+                    player_health += room[3][2]
                 else:
                     print(room[3][1])
                     #Updating player health
@@ -49,7 +51,7 @@ def acquire_item(inventory, item):
     #to add an item to the list
     """
     inventory.append(item)
-    print(f"You acquired a {item}!")
+    print(f"You found a {item} gold coins in the room.")
     return inventory
 
 def display_inventory(inventory):
@@ -81,6 +83,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-                
-
-
