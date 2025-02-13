@@ -5,7 +5,6 @@ def enter_dungeon(player_health, inventory, dungeon_rooms):
     this goes through different rooms
     """
     for room in dungeon_rooms:
-        print("Processing room:", room)
         print(room[0])
         if room[1]:
             acquire_item(inventory, room[1])
@@ -20,6 +19,7 @@ def enter_dungeon(player_health, inventory, dungeon_rooms):
                     print(room[3][1])
                     #Updating player health
             player_health += room[3][2]
+            print(f"Your current health: {player_health}")
             if player_health < 0:
                 player_health = 0
                 print("You are barely alive!")
@@ -35,13 +35,13 @@ def enter_dungeon(player_health, inventory, dungeon_rooms):
                     print(room[3][1])
                     #Updating player health
             player_health += room[3][2]
+            print(f"Your current health: {player_health}")
             if player_health < 0:
                 player_health = 0
                 print("You are barely alive!")
         elif room[2] == "none":
             print("There doesn't seem to be a challenge in this room. You move on.")
         display_inventory(inventory)
-
     print(f"Your current health: {player_health}")
     return player_health, inventory
 
