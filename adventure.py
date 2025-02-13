@@ -22,7 +22,7 @@ def enter_dungeon(player_health, inventory, dungeon_rooms):
             if player_health < 0:
                 player_health = 0
                 print("You are barely alive!")
-        
+
         elif room[2] == "trap":
             print("You see a potential trap!")
             choice_2 = input("Disarm or bypass? ")
